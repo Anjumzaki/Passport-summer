@@ -1,7 +1,12 @@
 {
   "permissions": {
     "allow": [
-      "Bash(grep *)"
+      "Bash(grep *)",
+      "WebFetch(domain:unsplash.com)",
+      "Bash(curl -s -o /dev/null -w \"Santorini: %{http_code} \\(%{size_download} bytes\\)\\\\n\" \"https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?w=1200&h=800&fit=crop&auto=format&q=80\")",
+      "Bash(curl -s -o /dev/null -w \"Amalfi: %{http_code} \\(%{size_download} bytes\\)\\\\n\" \"https://images.unsplash.com/photo-1561956021-947f09ae0101?w=1200&h=800&fit=crop&auto=format&q=80\")",
+      "Bash(curl -s -o /dev/null -w \"Bali: %{http_code} \\(%{size_download} bytes\\)\\\\n\" \"https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=1200&h=800&fit=crop&auto=format&q=80\")",
+      "Bash(curl -s -o /dev/null -w \"Paris: %{http_code} \\(%{size_download} bytes\\)\\\\n\" \"https://images.unsplash.com/photo-1431274172761-fca41d930114?w=1200&h=800&fit=crop&auto=format&q=80\")"
     ]
   }
 }

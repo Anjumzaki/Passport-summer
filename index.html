@@ -558,15 +558,15 @@
 <div class="toast" id="toast"></div>
 
 <script>
-function destVisual(q, c1, c2) {
-  return `linear-gradient(135deg, ${c1}4D 0%, ${c2}4D 100%), url('https://source.unsplash.com/1200x800/?${q}') center/cover no-repeat, linear-gradient(135deg, ${c1} 0%, ${c2} 100%)`;
+function destVisual(photoId, c1, c2) {
+  return `linear-gradient(135deg, ${c1}4D 0%, ${c2}4D 100%), url('https://images.unsplash.com/${photoId}?w=1200&h=800&fit=crop&auto=format&q=80') center/cover no-repeat, linear-gradient(135deg, ${c1} 0%, ${c2} 100%)`;
 }
 
 const DESTINATIONS = [
   { id: 'greece', name: 'Greece', script: 'kalispéra', flag: '🇬🇷', region: 'Aegean & Cyclades',
     tagline: 'Where the sea is the colour of impossible things and lunch lasts till sundown.',
     experience: 'Sit on whitewashed terraces while bouzouki music plays. Plate-smashing at sunset. Free Greek lesson with the chef every Thursday.',
-    visualBg: destVisual('santorini', '#2EC4B6', '#006B7A'), visualText: 'Santorini at golden hour',
+    visualBg: destVisual('photo-1613395877344-13d4a8e0d49e', '#2EC4B6', '#006B7A'), visualText: 'Santorini at golden hour',
     stamps: [
       { name: 'SANTORINI', icon: '🏛️', date: '—', color: '#2EC4B6', collected: false, rotation: -8 },
       { name: 'MYKONOS', icon: '⛵', date: '—', color: '#0077A8', collected: false, rotation: 5 },
@@ -575,7 +575,7 @@ const DESTINATIONS = [
   { id: 'italy', name: 'Italy', script: 'la dolce vita', flag: '🇮🇹', region: 'Amalfi & Toscana',
     tagline: 'Slow lunches, faster heartbeats. The pasta is made this morning. The wine is older than the building.',
     experience: 'Hand-rolled pasta classes on Saturdays. A roving accordionist. Limoncello on the house if you can name three of the Sister cities.',
-    visualBg: destVisual('amalfi', '#E5734A', '#8B2E0F'), visualText: 'Positano cliffs at midday',
+    visualBg: destVisual('photo-1561956021-947f09ae0101', '#E5734A', '#8B2E0F'), visualText: 'Positano cliffs at midday',
     stamps: [
       { name: 'AMALFI', icon: '🍋', date: '—', color: '#E5734A', collected: false, rotation: -6 },
       { name: 'TUSCANY', icon: '🍷', date: '—', color: '#8B2E0F', collected: false, rotation: 4 },
@@ -584,7 +584,7 @@ const DESTINATIONS = [
   { id: 'bali', name: 'Bali', script: 'sun & spice', flag: '🇮🇩', region: 'Ubud & Seminyak',
     tagline: 'Coconut, lemongrass, smoke and rain. The volume turns down. The colours turn up.',
     experience: 'Gamelan music every Friday. Frangipani garland workshops. A real ritual cleansing led by visiting Balinese chef Putu.',
-    visualBg: destVisual('bali-rice-terrace', '#FF6B6B', '#2D5016'), visualText: 'Ubud rice terraces',
+    visualBg: destVisual('photo-1555400038-63f5ba517a47', '#FF6B6B', '#2D5016'), visualText: 'Ubud rice terraces',
     stamps: [
       { name: 'UBUD', icon: '🌺', date: '—', color: '#FF6B6B', collected: false, rotation: -7 },
       { name: 'SEMINYAK', icon: '🥥', date: '—', color: '#2D5016', collected: false, rotation: 3 },
@@ -592,7 +592,7 @@ const DESTINATIONS = [
   { id: 'paris', name: 'Paris', script: 'bonjour, été', flag: '🇫🇷', region: 'Rive Gauche',
     tagline: 'A bistro on a Tuesday. The light is soft. The butter is salted. Nothing else is required.',
     experience: 'Cheese-and-wine pairings every Tuesday. A French film projected at dusk. A pétanque corner near the patio.',
-    visualBg: destVisual('paris-eiffel', '#D4B5C4', '#2C3E5A'), visualText: 'Café terrace, Le Marais',
+    visualBg: destVisual('photo-1431274172761-fca41d930114', '#D4B5C4', '#2C3E5A'), visualText: 'Café terrace, Le Marais',
     stamps: [
       { name: 'PARIS', icon: '🥐', date: '—', color: '#2C3E5A', collected: false, rotation: -5 },
       { name: 'PROVENCE', icon: '💐', date: '—', color: '#9B5DA8', collected: false, rotation: 6 },
@@ -607,37 +607,37 @@ const REWARDS = [
 ];
 
 const COMMUNITY = [
-  { tag: 'Greek Nights · Every Thursday', title: 'Tavli & Tzatziki', visual: destVisual('santorini', '#2EC4B6', '#006B7A'), text: 'Backgammon tournaments with mezze platters. Open to all — no skill needed, only appetite.' },
-  { tag: 'Italian Sundays', title: 'Pasta Hands-On', visual: destVisual('amalfi', '#E5734A', '#8B2E0F'), text: 'Roll, cut, and eat your own tagliatelle alongside our visiting nonna-trained chef.' },
-  { tag: 'Bali Wellness · Saturdays', title: 'Gamelan & Garlands', visual: destVisual('bali-rice-terrace', '#FF6B6B', '#2D5016'), text: 'Live gamelan ensembles, frangipani garland-making, and a wellness blessing for the table.' },
-  { tag: 'French Tuesdays', title: 'Cinéma & Cheese', visual: destVisual('paris-eiffel', '#D4B5C4', '#2C3E5A'), text: 'A classic French film projected against our garden wall, paired with a curated fromage board.' },
+  { tag: 'Greek Nights · Every Thursday', title: 'Tavli & Tzatziki', visual: destVisual('photo-1613395877344-13d4a8e0d49e', '#2EC4B6', '#006B7A'), text: 'Backgammon tournaments with mezze platters. Open to all — no skill needed, only appetite.' },
+  { tag: 'Italian Sundays', title: 'Pasta Hands-On', visual: destVisual('photo-1561956021-947f09ae0101', '#E5734A', '#8B2E0F'), text: 'Roll, cut, and eat your own tagliatelle alongside our visiting nonna-trained chef.' },
+  { tag: 'Bali Wellness · Saturdays', title: 'Gamelan & Garlands', visual: destVisual('photo-1555400038-63f5ba517a47', '#FF6B6B', '#2D5016'), text: 'Live gamelan ensembles, frangipani garland-making, and a wellness blessing for the table.' },
+  { tag: 'French Tuesdays', title: 'Cinéma & Cheese', visual: destVisual('photo-1431274172761-fca41d930114', '#D4B5C4', '#2C3E5A'), text: 'A classic French film projected against our garden wall, paired with a curated fromage board.' },
   { tag: 'Families Welcome', title: 'Kids Sketch the World', visual: 'linear-gradient(135deg, #F58549, #C8A961)', text: 'Themed colouring tables, a country-of-the-week mascot, and a junior passport for under-12s.' },
   { tag: 'Every Friday Night', title: 'Long-Table Suppers', visual: 'linear-gradient(135deg, #0B2545, #2EC4B6)', text: 'Strangers sit together. Conversation is the only condition. By the end, no one is a stranger.' }
 ];
 
 const MENUS = [
-  { country: 'Greece', flag: '🇬🇷', script: 'γεια σας', bg: destVisual('santorini', '#2EC4B6', '#006B7A'),
+  { country: 'Greece', flag: '🇬🇷', script: 'γεια σας', bg: destVisual('photo-1613395877344-13d4a8e0d49e', '#2EC4B6', '#006B7A'),
     items: [
       { name: 'Spanakopita Tartlets', desc: 'Spinach, feta, lemon zest, filo', price: 'AED 38' },
       { name: 'Slow-Roast Lamb Kleftiko', desc: 'Parchment-wrapped, oregano, garlic, potatoes', price: 'AED 145' },
       { name: 'Galaktoboureko', desc: 'Semolina custard, filo, orange syrup', price: 'AED 42' },
       { name: 'Aegean Spritz', desc: 'Mastiha, cucumber, prosecco', price: 'AED 58' }
     ] },
-  { country: 'Italy', flag: '🇮🇹', script: 'buongiorno', bg: destVisual('amalfi', '#E5734A', '#8B2E0F'),
+  { country: 'Italy', flag: '🇮🇹', script: 'buongiorno', bg: destVisual('photo-1561956021-947f09ae0101', '#E5734A', '#8B2E0F'),
     items: [
       { name: 'Burrata di Andria', desc: 'Heirloom tomato, basil oil, focaccia', price: 'AED 72' },
       { name: 'Tagliatelle al Tartufo', desc: 'Hand-cut pasta, black truffle, parmigiano', price: 'AED 128' },
       { name: 'Tiramisù Classico', desc: 'Mascarpone, espresso, cocoa', price: 'AED 48' },
       { name: 'Limoncello Spritz', desc: 'Amalfi lemon, prosecco, mint', price: 'AED 54' }
     ] },
-  { country: 'Bali', flag: '🇮🇩', script: 'selamat', bg: destVisual('bali-rice-terrace', '#FF6B6B', '#2D5016'),
+  { country: 'Bali', flag: '🇮🇩', script: 'selamat', bg: destVisual('photo-1555400038-63f5ba517a47', '#FF6B6B', '#2D5016'),
     items: [
       { name: 'Lawar Salad', desc: 'Long beans, coconut, kaffir lime', price: 'AED 52' },
       { name: 'Babi Guling-Style Pork Belly', desc: 'Twelve-hour, sambal matah, jasmine rice', price: 'AED 138' },
       { name: 'Pandan Panna Cotta', desc: 'Coconut cream, palm sugar, lime', price: 'AED 44' },
       { name: 'Jamu Sour', desc: 'Turmeric, ginger, tamarind, mezcal', price: 'AED 62' }
     ] },
-  { country: 'Paris', flag: '🇫🇷', script: 'bonjour', bg: destVisual('paris-eiffel', '#D4B5C4', '#2C3E5A'),
+  { country: 'Paris', flag: '🇫🇷', script: 'bonjour', bg: destVisual('photo-1431274172761-fca41d930114', '#D4B5C4', '#2C3E5A'),
     items: [
       { name: 'Plateau de Fromages', desc: 'Five French cheeses, fig jam, walnut bread', price: 'AED 95' },
       { name: 'Confit de Canard', desc: 'Slow-cooked duck leg, gratin dauphinois', price: 'AED 142' },
